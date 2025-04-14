@@ -1,9 +1,12 @@
 class Solution:
-    # Design: 
-    # Use a Set to keep track of the currently seen characters.
-    # Progress the right index through the string adding each character seen to the Set, and increasing the max length tracker.
-    # When we come across a duplicate character, progress the left index removing each character passed from the Set.
-    # Once we pass the duplicate character, progress the left index once more, but without removing the duplicate, since it is contained by the right index.
+    '''
+    Design: 
+        Use a Set to keep track of the currently seen characters.
+        Progress the right index through the string adding each character seen to the Set, and increasing the max length tracker.
+        When we come across a duplicate character, progress the left index removing each character passed from the Set.
+        Once we pass the duplicate character, progress the left index once more, but without removing the duplicate, since it is contained by the right index.
+    '''
+
     def lengthOfLongestSubstring(self, s: str) -> int:
         leftIndex = 0
         charSet = set()
@@ -24,6 +27,8 @@ class Solution:
 
         return maxLength
     
-# Post Analysis
-# Nothing of note, just be careful of that index difference on the max
-# Glad I thought of the leftIndex moving once more, that could have been a pain to debug
+'''
+Post Analysis
+    Nothing of note, just be careful of that index difference on the max
+    Glad I thought of the leftIndex moving once more, that could have been a pain to debug
+'''

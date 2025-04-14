@@ -15,18 +15,20 @@ class ListNode:
 #         self.val = val
 #         self.next = next
 class Solution:
-    # Design:
-    # Think of a return buffer for a calculator's display in a full adder.
-    # Create a new dummy head node that we will use for the output.
-    # Link this node to a node that we will use to progress through the digits.
-    # Loop:
-    #   Get the each digit from the input list, otherwise have that digit to be 0, so we can progress through the other list or remaining carry.
-    #   Add the digits and any previous carry.
-    #   Store the 1's digit of the result in a new node and attach it to our linked list.
-    #   Calculate the new carry and store it.
-    #   Move the pointers for each of our lists if we can.
-    #   Keep calculating as long as there is a next value in each input list and we have no carry.
-    # Return the list.
+    '''
+    Design:
+        Think of a return buffer for a calculator's display in a full adder.
+        Create a new dummy head node that we will use for the output.
+        Link this node to a node that we will use to progress through the digits.
+        Loop:
+            Get the each digit from the input list, otherwise have that digit to be 0, so we can progress through the other list or remaining carry.
+            Add the digits and any previous carry.
+            Store the 1's digit of the result in a new node and attach it to our linked list.
+            Calculate the new carry and store it.
+            Move the pointers for each of our lists if we can.
+            Keep calculating as long as there is a next value in each input list and we have no carry.
+        Return the list.
+    '''
     def addTwoNumbers(
         self, 
         l1: Optional[ListNode], 
@@ -62,5 +64,7 @@ class Solution:
         # Return next element as the first element is just 0
         return tempNode.next
 
-# Post Analysis:
-# Should return the next node of our tempNode, this is our list.
+'''
+Post Analysis:
+    Should return the next node of our tempNode, this is our list.
+'''
